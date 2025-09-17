@@ -1,3 +1,10 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master    # or 'main' if that's your default branch
+
 jobs:
   build-test-release:
     runs-on: ubuntu-latest
