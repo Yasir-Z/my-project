@@ -1,1 +1,4 @@
 flask
+flake8
+pylint
+black
