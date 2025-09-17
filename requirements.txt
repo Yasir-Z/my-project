@@ -5,3 +5,5 @@ pylint
 black
 my_app
 coverage
+pytest
+bandit
