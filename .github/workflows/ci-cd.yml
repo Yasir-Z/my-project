@@ -50,4 +50,10 @@ jobs:
       run: |
         docker tag my-flask-app:latest ${{ secrets.DOCKER_USERNAME }}/my-flask-app:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/my-flask-app:latest
+    - name: Run static analysis
+       run: |
+        bandit -r . --severity-level high
+
+
+
 
