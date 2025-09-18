@@ -1,6 +1,4 @@
-Flask==2.3.2
-Werkzeug>=2.3.3
-flask
+Flask
 flake8
 pylint
 black
@@ -9,3 +7,4 @@ coverage
 pytest
 bandit
 
+~             
