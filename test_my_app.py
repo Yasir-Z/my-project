@@ -1,3 +1,8 @@
+import werkzeug
+
+if not hasattr(werkzeug, "__version__"):
+    werkzeug.__version__ = "2.3.3"  # or any fake version string
+
 import unittest
 from app import app
 
