@@ -29,7 +29,7 @@ jobs:
 
     - name: Run static analysis
       run: |
-        bandit app.py || true
+        bandit -r . -x ./venv,__pycache__,.git
 
     - name: Run tests with coverage
       run: |
