@@ -29,6 +29,6 @@ jobs:
 
       - name: Run lint test
         run: |
-          flake8 .
+          flake8 . --exclude=venv
 
 
