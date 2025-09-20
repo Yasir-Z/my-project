@@ -21,12 +21,12 @@ def echo():
     """
     POST /echo
     Accepts JSON data in the request body and echoes it back in the response.
-    
+
     Request JSON example:
     {
         "key": "value"
     }
-    
+
     Response JSON: Same as the request JSON.
     """
     data = request.json
@@ -39,4 +39,3 @@ if __name__ == "__main__":
 
 # trigger CI/CD
 # trigger CI/CD 2nd time
-
