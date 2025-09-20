@@ -25,6 +25,8 @@ jobs:
 
       - name: Lint code
         run: flake8 .
+          pip install flake8
+          flake8 . --exclude=venv
 
   test:
     needs: lint
