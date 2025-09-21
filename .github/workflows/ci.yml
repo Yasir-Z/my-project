@@ -47,6 +47,9 @@ jobs:
           coverage run -m pytest
           coverage report --fail-under=80  # fails if coverage < 80%
 
-
+      - name: Secruity test with bandit
+        run: |
+          pip isntall bandit
+          bandit -r . -x tests
 
           
