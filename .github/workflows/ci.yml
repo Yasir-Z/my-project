@@ -78,8 +78,8 @@ jobs:
 
       - name: Push docker image
         run: |
-          docker tag my-project:${{ env.VERSION }} mydockerhubuser/my-project:${{ env.VERSION }}
-          docker push mydockerhubuser/my-project:${{ env.VERSION }}
+          docker tag my-project:${{ env.VERSION }} shepherd777/my-project:${{ env.VERSION }}
+          docker push shepherd777/my-project:${{ env.VERSION }}
 
 
 
