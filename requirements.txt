@@ -6,3 +6,5 @@ bandit
 mypy
 docker
 pylint 
+setuptools>=78.1.1
+
