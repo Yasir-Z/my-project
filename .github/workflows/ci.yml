@@ -55,7 +55,7 @@ jobs:
       - name: Dependency Test
         run: |
           pip install pip-audit
-          pip audit
+          pip-audit
 
 
 
