@@ -31,4 +31,10 @@ jobs:
 
       - name: Check code formatting with balck
         run: black --check . --exclude=venv
+
+      - name: Static analysis with pylint
+        run: pylint app.py
+
+
+
           
