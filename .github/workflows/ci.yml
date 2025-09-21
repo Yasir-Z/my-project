@@ -25,3 +25,6 @@ jobs:
           pip install -r requirements.txt
           pip install flake8 black pylint pytest
 
+      - name:
+        run: 
+          flake8 . --exclude=venv
