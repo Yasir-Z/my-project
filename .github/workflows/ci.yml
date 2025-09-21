@@ -38,4 +38,8 @@ jobs:
       - name: Run unit test
         run: pytest test_my_app.py
 
+      - name: Run integration test (QA test)
+        run: pytest test_integration.py
+
+
           
