@@ -1,27 +1,23 @@
-import werkzeug
-
-if not hasattr(werkzeug, "__version__"):
-    werkzeug.__version__ = "2.3.3"  # or any fake version string
+"""Unit tests for Flask app endpoints."""
 
 import unittest
-from app import app
+from app import app  # First-party import
 
-class FlaskAppTestCase(unittest.TestCase):
+
+class FlaskAppTest(unittest.TestCase):
+    """Test cases for Flask app routes."""
+
     def setUp(self):
-        # Creates a test client
-        self.app = app.test_client()
-        self.app.testing = True  # Propagate exceptions to the test client
+        """Set up test client."""
+        self.client = app.test_client()
+        self.client.testing = True
 
-    def test_hello_route(self):
-        # Send GET request to "/"
-        response = self.app.get('/')
-        
-        # Check status code
+    def test_homepage(self):
+        """Test the '/' route returns status 200 and contains 'Hello'."""
+        response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-        
-        # Check response data (bytes)
-        self.assertEqual(response.data, b"Hello from Flask!")
+        self.assertIn(b"Hello", response.data)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
-

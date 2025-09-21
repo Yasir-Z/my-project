@@ -1,8 +1,8 @@
-Flask==2.0.1
-pytest==7.0.0
+Flask
+pytest
 flake8
 black
 bandit
 mypy
 docker
-
+pylint 
