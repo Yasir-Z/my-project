@@ -49,7 +49,7 @@ jobs:
 
       - name: Secruity test with bandit
         run: |
-          pip isntall bandit
+          pip install bandit
           bandit -r . -x tests
 
           
