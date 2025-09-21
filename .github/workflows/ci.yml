@@ -52,4 +52,11 @@ jobs:
           pip install bandit
           bandit app.py
 
+      - name: Dependency Test
+        run: |
+          pip install pip-audit
+          pip audit
+
+
+
           
