@@ -60,5 +60,12 @@ jobs:
         run: pip-audit
 
 
+      - name: Get version from git tage 
+        id: version
+        run: |
+          VERSION=$(git describe --tags --abbrev=0 || echo "v0.1.0")
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+    
 
+ 
           
