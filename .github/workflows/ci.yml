@@ -50,6 +50,6 @@ jobs:
       - name: Secruity test with bandit
         run: |
           pip install bandit
-          bandit -r . -x tests
+          bandit -r . -x venv,tests,migrations,__pycache__,build
 
           
