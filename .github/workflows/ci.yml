@@ -43,7 +43,7 @@ jobs:
 
       - name: Run coverage test
         run: |
-          pip isntall coverage 
+          pip install coverage 
           coverage run -m pytest
           coverage report --fail-under=80  # fails if coverage < 80%
 
